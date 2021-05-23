@@ -5,7 +5,10 @@ window.onkeydown = (event) => {
   event.preventDefault();
   console.log(event);
   var x = event.key;
-  keyNumber.textContent = x.charCodeAt(0);
+  keyNumber.classList.add("cards-1");
+  keyNumber.innerHTML = `
+  <p>ASCII Code (Dec)</p>
+  <div>${(keyNumber.textContent = x.charCodeAt(0))}</div>`;
 
   keyInfo.innerHTML = `
   <div class="key cards">
