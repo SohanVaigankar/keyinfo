@@ -1,8 +1,12 @@
 const keyNumber = document.querySelector(".key-number");
 const keyInfo = document.querySelector(".key-info");
 
-window.onkeypress = (event) => {
-  keyNumber.textContent = event.keyCode;
+window.onkeydown = (event) => {
+  event.preventDefault();
+  console.log(event);
+  var x = event.key;
+  keyNumber.textContent = x.charCodeAt(0);
+
   keyInfo.innerHTML = `
   <div class="key cards">
   <p>event.key</p>
