@@ -17,4 +17,16 @@ window.onkeydown = (event) => {
   <p>event.code</p>
   <div>${event.code}</div>
 </div>`;
+
+  keyInfo.innerHTML += `
+<div class="key-code cards">
+<p>event.keyCode</p>
+<div>${event.keyCode}</div>
+</div>`;
+
+  keyInfo.innerHTML += `
+<div class="key-code cards">
+<p>event.which</p>
+<div>${event.which}</div>
+</div>`;
 };
