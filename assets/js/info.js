@@ -35,6 +35,8 @@ const noAsciiValues = [
   "Delete",
   "Clear",
   "Escape",
+  "Insert",
+  "ScrollLock",
 ];
 
 // function to check if ASCII value is present
