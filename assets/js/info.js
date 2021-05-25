@@ -1,58 +1,14 @@
 const keyNumber = document.querySelector(".key-number");
 const keyInfo = document.querySelector(".key-info");
 
-// Array consisting of keys which doesn't have any ASCII Code associated with them
-const noAsciiValues = [
-  "F1",
-  "F2",
-  "F3",
-  "F4",
-  "F5",
-  "F6",
-  "F7",
-  "F8",
-  "F9",
-  "F10",
-  "F11",
-  "F12",
-  "Enter",
-  "Control",
-  "Alt",
-  "Home",
-  "PageUp",
-  "PageDown",
-  "End",
-  "NumLock",
-  "ArrowUp",
-  "ArrowDown",
-  "ArrowLeft",
-  "ArrowRight",
-  "Backspace",
-  "Tab",
-  "CapsLock",
-  "Shift",
-  "ContextMenu",
-  "Delete",
-  "Clear",
-  "Escape",
-  "Insert",
-  "ScrollLock",
-];
-
 // function to check if ASCII value is present
 function checkAscii(key) {
-  var flag = false;
-  noAsciiValues.forEach(function (element) {
-    // console.log(key);
-    if (element === key) flag = true;
-  });
-  if (flag == false) return key.charCodeAt(0);
+  if (String(key).length === 1) return key.charCodeAt(0);
   else return `---`;
 }
 
 window.onkeydown = (event) => {
   event.preventDefault();
-  // console.log(event);
 
   // Displays ASCII Code of the key pressed
   keyNumber.classList.add("cards-1");
