@@ -1,9 +1,12 @@
 const keyNumber = document.querySelector(".key-number");
 const keyInfo = document.querySelector(".key-info");
+var result;
 
 // function to check if ASCII value is present
 function checkAscii(key) {
   if (String(key).length === 1) return key.charCodeAt(0);
+  if (String(key) === "Escape") return "27";
+  if (String(key) === "Delete") return "127";
   else return `---`;
 }
 
